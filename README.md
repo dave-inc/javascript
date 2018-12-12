@@ -1260,10 +1260,10 @@ Other Style Guides
     export default es6;
     ```
 
-  <a name="modules--no-wildcard"></a><a name="10.2"></a>
-  - [10.2](#modules--no-wildcard) Do not use wildcard imports.
+  <a name="modules--prefer-no-wildcard"></a><a name="10.2"></a>
+  - [10.2](#modules--prefer-no-wildcard) Prefer not to use wildcard imports.
 
-    > Why? This makes sure you have a single default export.
+    > Why? This makes sure you have a single default export and are deliberate about what you're importing.
 
     ```javascript
     // bad
@@ -1271,6 +1271,13 @@ Other Style Guides
 
     // good
     import AirbnbStyleGuide from './AirbnbStyleGuide';
+
+    // good
+    import { myFunction } from './MyHelper';
+
+    // good
+    import * as MyHelper from './MyHelper';
+    sinon.stub(MyHelper, 'myFunction').returns(true);
     ```
 
   <a name="modules--no-export-from-import"></a><a name="10.3"></a>
