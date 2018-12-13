@@ -1278,6 +1278,9 @@ Other Style Guides
     // good
     import * as MyHelper from './MyHelper';
     sinon.stub(MyHelper, 'myFunction').returns(true);
+
+    // good
+    import * as lodash from 'lodash'; // Has no named exports.
     ```
 
   <a name="modules--no-export-from-import"></a><a name="10.3"></a>
